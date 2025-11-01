@@ -1,5 +1,5 @@
 # forward_to_saved.py
-# Talab: Python 3.8+, telethon
+# Talab: Python 3.10+, telethon
 # O'rnatish: pip install telethon
 
 import logging
@@ -7,10 +7,8 @@ from telethon import TelegramClient, events
 from telethon.errors import FloodWaitError
 import asyncio
 import os
-
-# !!! Bu yerga o'z APId va API_HASHingizni qo'ying
 API_ID = 23938357
-
+CHAT_ID = -1005049479645
 API_HASH = "b18904e991d8585610fa9eeabc86b337"
 SESSION_NAME = "session"
 
