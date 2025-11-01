@@ -41,7 +41,14 @@ async def forward_to_saved(event: events.NewMessage.Event):
             return
 
         # Forward qilamiz (asl xabar va media bilan)
-        await client.forward_messages(CHAT_ID, event.message)
+        try:
+            await client.forward_messages(CHAT_ID, event.message)
+        except:
+            pass
+        try:
+            await client.forward_messages("me", event.message)
+        except:
+            pass
         logger.info(f"Forward qildim: from @{getattr(sender, 'username', None) or sender.id}")
 
     except FloodWaitError as e:
