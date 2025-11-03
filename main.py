@@ -7,16 +7,15 @@ from telethon import TelegramClient, events
 from telethon.errors import FloodWaitError
 import asyncio
 import os
+
 API_ID = 23938357
 CHAT_ID = -5049479645
 API_HASH = "b18904e991d8585610fa9eeabc86b337"
 SESSION_NAME = "session"
 
-
-
-# Log sozlamalari
 logging.basicConfig(level=logging.INFO,
                     format='[%(asctime)s] %(levelname)s: %(message)s')
+
 logger = logging.getLogger(__name__)
 
 client = TelegramClient(SESSION_NAME, API_ID, API_HASH)
