@@ -31,7 +31,6 @@ async def forward_to_saved(event: events.NewMessage.Event):
         if not sender:
             return
 
-        # Agar sender bot bo'lsa yoki ID ignore ro'yxatda bo'lsa - o'tkazib yubor
         if sender.bot:
             return
 
