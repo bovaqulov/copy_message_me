@@ -49,6 +49,9 @@ async def forward_to_saved(event: events.NewMessage.Event):
             pass
         logger.info(f"Forward qildim: from @{getattr(sender, 'username', None) or sender.id}")
 
+
+
+
     except FloodWaitError as e:
         # Agar Telegram flood kutishni buyursa, kutamiz
         logger.warning(f"FloodWait: kutilyapti {e.seconds} soniya")
